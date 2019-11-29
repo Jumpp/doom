@@ -7,7 +7,11 @@
 ;; (package! builtin-package :disable t)
 
 ;; PACKAGES:
+(package! arc-dark-theme
+  :recipe (:host github :repo "cfraz89/arc-dark-theme")
+  )
 (package! prettier-js)
+(package! js-import)
 (package! emmet-mode)
 (package! move-text)
 (package! eslint-fix)

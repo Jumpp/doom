@@ -5,6 +5,7 @@
       user-mail-address "juuso.perala@viidakko.fi")
 ;; FORK OF MATERIAL
 (setq doom-theme 'juusop )
+;; (setq doom-theme 'arc-dark )
 
 
 ;; FONTS
@@ -34,8 +35,9 @@ evil-visual-state-cursor '((box . 2) "white")
       evil-normal-state-cursor '(box "orange"))
 
 ;; RELATIVE LINENUMBERS
-(setq display-line-numbers-type 'relative)
-;; (setq display-line-numbers-type 'nil)
+;; (setq display-line-numbers-type 'relative)
+;; DISABLE LINENUMBERS
+(setq display-line-numbers-type nil)
 
 ;; ORG-MODE
 ;; CORRECTS (AND IMPROVES) ORG-MODE'S NATIVE FONTIFICATION.
