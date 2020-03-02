@@ -83,7 +83,7 @@ evil-visual-state-cursor '((box . 2) "white")
                     "--arrow-parens" "always"
                     )
 
- projectile-project-search-path '("~/code/" "~/gitlab/" "~/kurssit")
+ projectile-project-search-path '("~/code/" "~/gitlab/")
 )
 
  ;; org-ellipsis " ▾ "
