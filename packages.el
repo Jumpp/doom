@@ -10,6 +10,12 @@
 (package! arc-dark-theme
   :recipe (:host github :repo "cfraz89/arc-dark-theme")
   )
+
+;; angular
+(package! ng2-mode )
+
+(package! typescript-mode )
+
 (package! prettier-js)
 (package! js-import)
 (package! emmet-mode)

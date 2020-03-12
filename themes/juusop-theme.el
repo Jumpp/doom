@@ -51,7 +51,7 @@
 
        (background (if (or window-system truecolor) "#263238" "#262626")) ;; sidebar-container
        (current-line (if (or window-system truecolor)  "#37474f" "#3a3a3a")) ;; tree-row
-       (far-background (if (or window-system truecolor)  "#1c1f26" "#121212")) ;; panel-control
+       (far-background (if (or window-system truecolor)  "#263238" "#121212")) ;; panel-control ;; #263238 ;; #232934
        (inactive-gray (if (or window-system truecolor) "#78909c" "#8a8a8a"))
        (header-color (if (or window-system truecolor) "#455A64" "#5f5f5f"))
        (subtle "#a7adba") ;; tree-row-hover-disclosure-button-control
