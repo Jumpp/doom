@@ -44,8 +44,17 @@
 
 ;; HOOKS
 ;; ENABLE FLYCHECK GLOBALLY
-;;(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
+;; CUSTOM KEYBINDINGS NOTE: ONLY THING WORTH KEEPING
+(define-key  evil-normal-state-map (kbd "ä") 'evil-backward-paragraph)
+(define-key  evil-visual-state-map (kbd "ä") 'evil-backward-paragraph)
+(define-key  evil-normal-state-map (kbd "ö") 'evil-forward-paragraph)
+(define-key  evil-visual-state-map (kbd "ö") 'evil-forward-paragraph)
+(define-key  evil-normal-state-map (kbd "å") 'evil-first-non-blank)
+(define-key  evil-visual-state-map (kbd "å") 'evil-first-non-blank)
+(define-key  evil-normal-state-map (kbd "¨") 'evil-last-non-blank)
+(define-key  evil-visual-state-map (kbd "¨") 'evil-last-non-blank)
 
 ;; typescript angular hook
 (with-eval-after-load 'tide
