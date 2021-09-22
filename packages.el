@@ -6,8 +6,6 @@
 ;; (package! another-package :recipe (:host github :repo "username/repo"))
 ;; (package! builtin-package :disable t)
 
-;; gql
-(package! graphql-mode )
 
 ;; js scheisse
 (package! prettier-js)
@@ -16,8 +14,12 @@
 (package! move-text)
 (package! eslint-fix)
 
+
+;; vue
+;; (package! vue-mode)
+
 ;; typescript
-(package! typescript-mode )
+;; (package! typescript-mode )
 
 ;; angular
-(package! ng2-mode )
+;; (package! ng2-mode )

@@ -1,8 +1,9 @@
 ;;; .doom.d/config.el -*- lexical-binding: t; -*-
 
 ;; THATS A ME
+(tool-bar-mode 0)
 (setq user-full-name "Juuso Perälä"
-      user-mail-address "juuso.perala@boogiesoftware.com")
+      user-mail-address "juuso.perala@op.com")
 ;; FORK OF MATERIAL
 (setq doom-theme 'juusop)
 
@@ -17,7 +18,7 @@
  )
 
 ;; TRANSPARENCY
-
+;; (setq evil-undo-system 'undo-tree)
 (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
 (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
 (add-to-list 'default-frame-alist
@@ -57,13 +58,13 @@
 (define-key  evil-visual-state-map (kbd "¨") 'evil-last-non-blank)
 
 ;; typescript angular hook
-(with-eval-after-load 'tide
-  (flycheck-add-mode 'typescript-tslint 'ng2-ts-mode)
-  (flycheck-add-mode 'typescript-tide 'ng2-ts-mode)
-  )
+;; (with-eval-after-load 'tide
+;;   (flycheck-add-mode 'typescript-tslint 'ng2-ts-mode)
+;;   (flycheck-add-mode 'typescript-tide 'ng2-ts-mode)
+;;   )
 
 ;; PRETTIER HOOK
-(add-hook 'js-mode-hook 'prettier-js-mode)
+;; (add-hook 'js-mode-hook 'prettier-js-mode)
 
 ;; EMMET HOOK
 (add-hook 'js-mode-hook  'emmet-mode)
@@ -82,24 +83,20 @@
 ;; COMPANY
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; (add-hook 'js-mode-hook 'eslint-fix )
-;; (add-hook 'js2-mode-hook
-;;           (lambda ()
-;;             (add-hook 'after-save-hook #'eslint-fix-file-and-revert)))
+(add-hook 'js-mode-hook 'eslint-fix )
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (add-hook 'after-save-hook #'eslint-fix-file-and-revert)))
 
 (setq
- prettier-js-args '(
-                    ;; "--trailing-comma" "none"
-                    ;; "--bracket-spacing" "true"
-                    ;; "--tab-width" "4"
-                    ;; "--use-tabs" "true"
-                    ;; "--print-width" "120"
+  prettier-js-args '(
+                     "--trailing-comma" "none"
+                     ;; "--bracket-spacing" "true"
                     "--single-quote" "true"
-                    "--jsx-single-quote" "true"
-                    ;; "--arrow-parens" "always"
-                    )
+                    "--no-semi" "true"
+                     )
 
- projectile-project-search-path '("~/code/" "~/gitlab/")
+ projectile-project-search-path '("~/projects")
 
 
  org-ellipsis " ▾ "
